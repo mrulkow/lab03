@@ -1,0 +1,349 @@
+"","result","genre","rating","runtime","imdb","tomato","audience"
+"Shane","Nominee","Drama","G",118,7.6,97,81
+"Marty","Winner","Drama","NR",90,7.7,98,87
+"Patton","Winner","Biography","PG",172,7.9,94,93
+"The Conversation","Nominee","Drama","PG",113,7.8,96,90
+"All the President's Men","Nominee","Biography","PG",138,8,94,92
+"Annie Hall","Winner","Comedy","PG",93,8,98,92
+"Field of Dreams","Nominee","Drama","PG",107,7.5,87,86
+"The Fugitive","Nominee","Action","PG-13",130,7.8,96,89
+"Babe","Nominee","Comedy","G",91,6.8,97,67
+"The Full Monty","Nominee","Comedy","R",91,7.2,96,79
+"The Sixth Sense","Nominee","Drama","PG-13",107,8.1,86,90
+"Slumdog Millionaire","Winner","Drama","R",120,8,91,90
+"District 9","Nominee","Action","R",112,7.9,90,82
+"Inglourious Basterds","Nominee","Adventure","R",153,8.3,89,88
+"The Help","Nominee","Drama","PG-13",146,8,76,89
+"Hell or High Water","Nominee","Action","R",102,7.6,97,88
+"BlacKkKlansman","Nominee","Biography","R",135,7.5,96,83
+"Sunset Boulevard","Nominee","Drama","G",110,8.4,99,95
+"A Place in the Sun","Nominee","Drama","NR",122,7.8,77,84
+"The Quiet Man","Nominee","Comedy","G",129,7.8,91,91
+"From Here to Eternity","Winner","Drama","G",118,7.6,92,84
+"Mary Poppins","Nominee","Comedy","G",139,7.8,100,86
+"Alfie","Nominee","Comedy","PG",114,7,96,76
+"In the Heat of the Night","Winner","Crime","G",110,7.9,95,92
+"Bonnie and Clyde","Nominee","Action","R",111,7.8,88,88
+"Rachel, Rachel","Nominee","Drama","R",101,7.3,86,77
+"American Graffiti","Nominee","Comedy","PG",110,7.4,96,84
+"Kiss of the Spider Woman","Nominee","Drama","R",120,7.4,87,81
+"Unforgiven","Winner","Drama","R",130,8.2,96,93
+"The Yearling","Nominee","Drama","G",128,7.2,100,76
+"It's a Wonderful Life","Nominee","Drama","PG",130,8.6,94,95
+"Born Yesterday","Nominee","Comedy","NR",103,7.6,97,86
+"Decision Before Dawn","Nominee","Drama","NR",119,7.2,100,71
+"Moulin Rouge","Nominee","Biography","NR",119,7.1,78,90
+"The Country Girl","Nominee","Drama","NR",104,7.3,86,77
+"The Rose Tattoo","Nominee","Comedy","NR",117,7,67,74
+"Witness for the Prosecution","Nominee","Crime","NR",116,8.4,100,95
+"Peyton Place","Nominee","Drama","NR",157,7.2,65,72
+"Separate Tables","Nominee","Drama","G",100,7.4,69,76
+"Auntie Mame","Nominee","Comedy","NR",143,7.9,93,93
+"The Sundowners","Nominee","Adventure","NR",133,7.1,75,62
+"Lawrence of Arabia","Winner","Adventure","PG",228,8.3,98,93
+"America America","Nominee","Drama","NR",174,7.8,67,85
+"Zorba the Greek","Nominee","Comedy","NR",142,7.7,80,86
+"Doctor Zhivago","Nominee","Drama","PG-13",197,8,84,88
+"A Man for All Seasons","Winner","Biography","G",120,7.7,83,87
+"Guess Who's Coming to Dinner","Nominee","Comedy","NR",108,7.8,70,85
+"Doctor Dolittle","Nominee","Adventure","G",152,6.2,29,57
+"The Graduate","Nominee","Comedy","PG",106,8,87,90
+"Oliver!","Winner","Drama","G",153,7.4,82,81
+"Hello, Dolly!","Nominee","Adventure","G",146,7.1,43,76
+"Anne of the Thousand Days","Nominee","Biography","PG",145,7.5,38,83
+"Love Story","Nominee","Drama","PG",100,6.9,68,75
+"M*A*S*H","Nominee","Comedy","PG",116,7.5,87,83
+"Nicholas and Alexandra","Nominee","Biography","PG",183,7.2,67,78
+"A Clockwork Orange","Nominee","Crime","R",136,8.3,88,93
+"Cabaret","Nominee","Drama","PG",124,7.8,93,87
+"Cries and Whispers","Nominee","Drama","R",91,8.1,90,91
+"The Sting","Winner","Comedy","PG",129,8.3,94,95
+"The Exorcist","Nominee","Horror","R",122,8,83,87
+"The Towering Inferno","Nominee","Action","PG",165,7,69,72
+"The Deer Hunter","Winner","Drama","R",183,8.1,93,92
+"Kramer vs. Kramer","Winner","Drama","PG",105,7.8,88,89
+"Raging Bull","Nominee","Biography","R",129,8.2,93,93
+"On Golden Pond","Nominee","Drama","PG",109,7.6,93,87
+"Tootsie","Nominee","Comedy","PG",116,7.4,90,81
+"Gandhi","Winner","Biography","PG",191,8,85,92
+"The Verdict","Nominee","Drama","R",129,7.7,88,88
+"The Big Chill","Nominee","Comedy","R",105,7.2,68,77
+"The Dresser","Nominee","Drama","PG",118,7.6,100,87
+"A Passage to India","Nominee","Adventure","PG",164,7.3,76,78
+"The Color Purple","Nominee","Drama","PG-13",154,7.8,81,94
+"Out of Africa","Winner","Biography","PG",161,7.2,59,83
+"Platoon","Winner","Drama","R",120,8.1,88,93
+"Broadcast News","Nominee","Comedy","R",133,7.2,98,79
+"Moonstruck","Nominee","Comedy","PG",102,7.1,93,81
+"Mississippi Burning","Nominee","Crime","R",128,7.8,84,90
+"Rain Man","Winner","Drama","R",133,8,89,90
+"Working Girl","Nominee","Comedy","R",113,6.8,84,67
+"The Accidental Tourist","Nominee","Drama","PG",121,6.8,81,60
+"Born on the Fourth of July","Nominee","Biography","R",145,7.2,85,76
+"Awakenings","Nominee","Biography","PG-13",121,7.8,88,89
+"Bugsy","Nominee","Biography","R",136,6.8,85,69
+"JFK","Nominee","Drama","R",189,8,84,88
+"The Prince of Tides","Nominee","Drama","R",132,6.7,69,70
+"A Few Good Men","Nominee","Drama","R",138,7.7,83,89
+"Scent of a Woman","Nominee","Drama","R",156,8,89,92
+"Schindler's List","Winner","Biography","R",195,8.9,97,97
+"In the Name of the Father","Nominee","Biography","R",133,8.1,94,95
+"Good Will Hunting","Nominee","Drama","R",126,8.3,97,94
+"Titanic","Winner","Drama","PG-13",194,7.8,89,69
+"As Good as It Gets","Nominee","Comedy","PG-13",139,7.7,85,86
+"The Thin Red Line","Nominee","Drama","R",170,7.6,80,80
+"Shakespeare in Love","Winner","Comedy","R",123,7.1,92,80
+"The Cider House Rules","Nominee","Drama","PG-13",126,7.4,71,77
+"The Green Mile","Nominee","Crime","R",189,8.6,78,94
+"Chocolat","Nominee","Drama","PG-13",121,7.2,62,83
+"Traffic","Nominee","Crime","R",147,7.6,93,85
+"The Lord of the Rings: The Fellowship of the Ring","Nominee","Action","PG-13",178,8.8,91,95
+"A Beautiful Mind","Winner","Biography","PG-13",135,8.2,74,93
+"Gosford Park","Nominee","Comedy","R",131,7.2,86,78
+"The Lord of the Rings: The Two Towers","Nominee","Action","PG-13",179,8.7,95,95
+"Gangs of New York","Nominee","Crime","R",167,7.5,73,81
+"Chicago","Winner","Comedy","PG-13",113,7.2,86,83
+"The Hours","Nominee","Drama","PG-13",110,7.5,80,84
+"The Pianist","Nominee","Biography","R",150,8.5,95,96
+"The Lord of the Rings: The Return of the King","Winner","Action","PG-13",201,8.9,93,86
+"Million Dollar Baby","Winner","Drama","PG-13",132,8.1,91,90
+"The Aviator","Nominee","Biography","PG-13",170,7.5,86,79
+"Brokeback Mountain","Nominee","Drama","R",134,7.7,87,82
+"Munich","Nominee","Action","R",164,7.5,78,83
+"Letters from Iwo Jima","Nominee","Action","R",141,7.9,91,86
+"Juno","Nominee","Comedy","PG-13",96,7.4,94,88
+"There Will Be Blood","Nominee","Drama","R",158,8.2,92,86
+"Frost/Nixon","Nominee","Biography","R",122,7.7,93,88
+"The Reader","Nominee","Drama","R",124,7.6,63,79
+"The Curious Case of Benjamin Button","Nominee","Drama","PG-13",166,7.8,72,80
+"Up in the Air","Nominee","Comedy","R",109,7.4,91,79
+"Avatar","Nominee","Action","PG-13",162,7.8,82,82
+"Black Swan","Nominee","Drama","R",108,8,85,84
+"The Fighter","Nominee","Biography","R",116,7.8,90,89
+"True Grit","Nominee","Drama","PG-13",110,7.6,96,85
+"War Horse","Nominee","Action","PG-13",146,7.2,75,74
+"Amour","Nominee","Drama","PG-13",127,7.9,93,82
+"Django Unchained","Nominee","Drama","R",165,8.4,87,91
+"Les Misérables","Nominee","Drama","PG-13",158,7.6,69,79
+"Her","Nominee","Drama","R",126,8,95,82
+"American Hustle","Nominee","Crime","R",138,7.2,92,74
+"The Wolf of Wall Street","Nominee","Biography","R",180,8.2,80,83
+"Selma","Nominee","Biography","PG-13",128,7.5,99,86
+"The Big Short","Nominee","Biography","R",130,7.8,88,88
+"The Revenant","Nominee","Action","R",156,8,78,84
+"La La Land","Nominee","Comedy","PG-13",128,8,91,81
+"Manchester by the Sea","Nominee","Drama","R",137,7.8,96,78
+"Fences","Nominee","Drama","PG-13",139,7.2,92,75
+"Three Billboards Outside Ebbing, Missouri","Nominee","Comedy","R",115,8.1,90,87
+"The Shape of Water","Winner","Adventure","R",123,7.3,92,72
+"Darkest Hour","Nominee","Biography","PG-13",125,7.4,84,82
+"Vice","Nominee","Biography","R",132,7.2,65,60
+"The Greatest Show on Earth","Winner","Drama","NR",152,6.6,42,54
+"Z","Nominee","Crime","PG",127,8.3,93,93
+"Taxi Driver","Nominee","Crime","R",114,8.2,96,93
+"Witness","Nominee","Crime","R",112,7.4,93,80
+"Hannah and Her Sisters","Nominee","Comedy","PG-13",107,7.9,91,90
+"The Silence of the Lambs","Winner","Crime","R",118,8.6,96,95
+"Get Out","Nominee","Horror","R",104,7.7,98,86
+"Black Panther","Nominee","Action","PG-13",134,7.3,96,79
+"Anchors Aweigh","Nominee","Comedy","NR",140,7.1,62,79
+"The Razor's Edge","Nominee","Drama","NR",145,7.4,71,72
+"Crossfire","Nominee","Crime","NR",86,7.3,82,74
+"Miracle on 34th Street","Nominee","Comedy","NR",96,7.9,96,87
+"The Treasure of the Sierra Madre","Nominee","Adventure","NR",126,8.2,100,93
+"Twelve O'Clock High","Nominee","Drama","NR",132,7.7,96,87
+"A Letter to Three Wives","Nominee","Drama","NR",103,7.7,94,86
+"All About Eve","Winner","Drama","PG",138,8.2,99,94
+"Father of the Bride","Nominee","Comedy","G",92,7.2,90,74
+"Friendly Persuasion","Nominee","Drama","NR",137,7.4,88,81
+"Tom Jones","Winner","Adventure","NR",129,6.5,82,58
+"Lilies of the Field","Nominee","Drama","NR",94,7.6,91,86
+"Darling","Nominee","Drama","NR",128,7.1,67,71
+"The Sand Pebbles","Nominee","Adventure","PG-13",182,7.6,89,88
+"Chinatown","Nominee","Drama","R",130,8.2,99,93
+"Lenny","Nominee","Biography","R",111,7.6,88,88
+"Barry Lyndon","Nominee","Adventure","PG",185,8.1,91,92
+"Apocalypse Now","Nominee","Drama","R",147,8.4,98,94
+"Dangerous Liaisons","Nominee","Drama","R",119,7.6,93,83
+"High Noon","Nominee","Drama","PG",85,8,97,89
+"Ivanhoe","Nominee","Adventure","G",106,6.8,81,64
+"Seven Brides for Seven Brothers","Nominee","Comedy","G",102,7.4,88,87
+"On the Waterfront","Winner","Crime","NR",108,8.1,99,95
+"Mister Roberts","Nominee","Comedy","NR",123,7.7,92,84
+"Anatomy of a Murder","Nominee","Crime","G",161,8,100,90
+"The Nun's Story","Nominee","Drama","NR",149,7.6,94,82
+"Ship of Fools","Nominee","Drama","NR",149,7.1,72,78
+"Deliverance","Nominee","Adventure","R",109,7.7,89,82
+"Breaking Away","Nominee","Comedy","PG",101,7.7,95,88
+"Ghost","Nominee","Drama","PG-13",127,7.1,74,80
+"Forrest Gump","Winner","Drama","PG-13",142,8.8,71,95
+"Saving Private Ryan","Nominee","Drama","R",169,8.6,93,95
+"Seabiscuit","Nominee","Drama","PG-13",140,7.3,78,76
+"Little Miss Sunshine","Nominee","Comedy","R",101,7.8,91,91
+"The Kids Are All Right","Nominee","Comedy","R",106,7,92,74
+"Inception","Nominee","Action","PG-13",148,8.8,87,91
+"Boyhood","Nominee","Drama","R",165,7.9,97,81
+"Dunkirk","Nominee","Action","PG-13",106,7.8,92,81
+"Julius Caesar","Nominee","Biography","NR",120,7.3,95,81
+"Three Coins in the Fountain","Nominee","Drama","NR",102,6.3,60,43
+"The Caine Mutiny","Nominee","Drama","PG",124,7.7,92,87
+"The King and I","Nominee","Biography","G",133,7.4,96,83
+"The Apartment","Winner","Comedy","NR",125,8.3,93,94
+"The Guns of Navarone","Nominee","Action","PG",158,7.5,92,86
+"The Longest Day","Nominee","Action","G",178,7.8,87,90
+"The Music Man","Nominee","Comedy","G",151,7.7,94,85
+"Cleopatra","Nominee","Biography","G",192,7,62,69
+"Who's Afraid of Virginia Woolf?","Nominee","Drama","R",131,8,95,91
+"A Touch of Class","Nominee","Comedy","PG",106,6.5,83,64
+"Jaws","Nominee","Adventure","PG",124,8,98,90
+"Nashville","Nominee","Comedy","R",160,7.7,90,84
+"Heaven Can Wait","Nominee","Comedy","PG",101,6.9,88,68
+"Raiders of the Lost Ark","Nominee","Action","PG",115,8.4,95,96
+"Dead Poets Society","Nominee","Comedy","PG",128,8.1,84,92
+"Apollo 13","Nominee","Adventure","PG",140,7.6,96,87
+"Winter's Bone","Nominee","Drama","R",100,7.2,94,76
+"Toy Story 3","Nominee","Animation","G",103,8.2,98,89
+"Midnight in Paris","Nominee","Comedy","PG-13",94,7.7,93,83
+"Beasts of the Southern Wild","Nominee","Adventure","PG-13",93,7.3,87,76
+"The Diary of Anne Frank","Nominee","Biography","PG",180,7.4,79,77
+"Becket","Nominee","Biography","PG-13",148,7.8,76,87
+"The Sound of Music","Winner","Biography","G",172,8,83,91
+"Airport","Nominee","Action","G",137,6.6,73,53
+"The Godfather","Winner","Crime","R",175,9.2,98,98
+"Coal Miner's Daughter","Nominee","Biography","PG",124,7.5,86,86
+"Tender Mercies","Nominee","Drama","PG",92,7.4,84,82
+"Howards End","Nominee","Drama","PG",142,7.4,94,82
+"Four Weddings and a Funeral","Nominee","Comedy","R",117,7.1,96,74
+"Fargo","Nominee","Crime","R",98,8.1,94,93
+"Erin Brockovich","Nominee","Biography","R",131,7.4,84,81
+"The Grand Budapest Hotel","Nominee","Adventure","R",99,8.1,91,86
+"Hamlet","Winner","Drama","NR",154,7.6,95,80
+"Gigi","Winner","Comedy","G",115,6.7,81,74
+"The Russians Are Coming, the Russians Are Coming","Nominee","Comedy","G",126,7,86,75
+"Midnight Cowboy","Winner","Drama","R",113,7.8,88,88
+"Braveheart","Winner","Biography","R",178,8.3,78,85
+"Gladiator","Winner","Action","R",155,8.5,77,87
+"Moulin Rouge!","Nominee","Drama","PG-13",127,7.6,76,89
+"Up","Nominee","Animation","PG",96,8.2,98,90
+"The Tree of Life","Nominee","Drama","PG-13",139,6.8,85,60
+"Mad Max: Fury Road","Nominee","Action","R",120,8.1,97,85
+"The Lost Weekend","Winner","Drama","NR",101,7.9,97,90
+"The Best Years of Our Lives","Winner","Drama","NR",170,8.1,97,93
+"Gentleman's Agreement","Winner","Drama","PG",118,7.2,76,78
+"The Snake Pit","Nominee","Drama","NR",108,7.6,100,83
+"All the King's Men","Winner","Drama","PG",110,7.5,95,78
+"Battleground","Nominee","Action","NR",118,7.5,75,82
+"King Solomon's Mines","Nominee","Action","G",103,6.8,92,59
+"Picnic","Nominee","Drama","PG",115,7.1,50,54
+"Giant","Nominee","Drama","G",201,7.6,95,87
+"Ben-Hur","Winner","Adventure","G",212,8.1,86,89
+"Mutiny on the Bounty","Winner","Adventure","NR",178,7.2,68,73
+"Fiddler on the Roof","Nominee","Drama","G",181,8,83,92
+"One Flew Over the Cuckoo's Nest","Winner","Drama","R",133,8.7,94,96
+"Rocky","Winner","Drama","PG",120,8.1,94,69
+"Network","Nominee","Drama","R",121,8.1,91,93
+"The Goodbye Girl","Nominee","Comedy","PG",111,7.4,84,84
+"Terms of Endearment","Winner","Comedy","PG",132,7.4,78,83
+"The Killing Fields","Nominee","Biography","R",141,7.8,93,92
+"The Last Emperor","Winner","Biography","PG-13",163,7.7,89,88
+"Beauty and the Beast","Nominee","Animation","G",84,8,94,92
+"The Crying Game","Nominee","Crime","R",112,7.3,94,78
+"The Remains of the Day","Nominee","Drama","PG",134,7.8,95,89
+"The Piano","Nominee","Drama","R",121,7.6,92,86
+"The English Patient","Winner","Drama","R",162,7.4,85,83
+"Shine","Nominee","Biography","PG-13",105,7.7,91,90
+"Elizabeth","Nominee","Biography","R",124,7.4,82,86
+"The Insider","Nominee","Biography","R",157,7.8,96,90
+"In the Bedroom","Nominee","Crime","R",131,7.4,93,81
+"Master and Commander: The Far Side of the World","Nominee","Action","PG-13",138,7.4,85,80
+"Finding Neverland","Nominee","Biography","PG",106,7.7,83,87
+"No Country for Old Men","Winner","Crime","R",122,8.1,93,86
+"Milk","Nominee","Biography","R",128,7.5,93,89
+"The Blind Side","Nominee","Biography","PG-13",129,7.6,66,85
+"127 Hours","Nominee","Biography","R",94,7.5,93,85
+"The King's Speech","Winner","Biography","PG-13",118,8,94,92
+"The Descendants","Nominee","Comedy","R",115,7.3,88,79
+"Hugo","Nominee","Drama","PG",126,7.5,93,78
+"The Artist","Winner","Comedy","PG-13",100,7.9,95,87
+"Life of Pi","Nominee","Adventure","PG",127,7.9,87,84
+"Silver Linings Playbook","Nominee","Comedy","R",122,7.7,92,86
+"Dallas Buyers Club","Nominee","Biography","R",117,8,93,91
+"Nebraska","Nominee","Adventure","R",115,7.7,91,83
+"Philomena","Nominee","Biography","PG-13",98,7.6,90,89
+"The Theory of Everything","Nominee","Biography","PG-13",123,7.7,80,84
+"The Imitation Game","Nominee","Biography","PG-13",114,8,89,91
+"Brooklyn","Nominee","Drama","PG-13",117,7.5,97,87
+"Spotlight","Winner","Biography","R",129,8.1,97,93
+"Hacksaw Ridge","Nominee","Biography","R",139,8.1,84,91
+"Arrival","Nominee","Drama","PG-13",116,7.9,94,82
+"Lion","Nominee","Biography","PG-13",118,8,84,91
+"Lady Bird","Nominee","Comedy","R",94,7.4,99,79
+"Bohemian Rhapsody","Nominee","Biography","PG-13",134,7.9,60,85
+"Green Book","Winner","Biography","PG-13",130,8.2,77,91
+"Roma","Nominee","Drama","R",135,7.7,96,72
+"The Favourite","Nominee","Biography","R",119,7.5,93,69
+"Mildred Pierce","Nominee","Crime","NR",111,8,86,90
+"An American in Paris","Winner","Drama","G",114,7.2,96,79
+"The Ten Commandments","Nominee","Adventure","G",220,7.9,89,87
+"Around the World in 80 Days","Winner","Adventure","G",175,6.8,69,57
+"The Bridge on the River Kwai","Winner","Adventure","PG",161,8.1,95,93
+"The Alamo","Nominee","Adventure","NR",162,6.8,52,63
+"West Side Story","Winner","Crime","PG",153,7.5,92,84
+"Romeo and Juliet","Nominee","Drama","PG",138,7.6,95,74
+"The Lion in Winter","Nominee","Biography","PG",134,7.9,90,90
+"Butch Cassidy and the Sundance Kid","Nominee","Biography","PG",110,8,90,92
+"The French Connection","Winner","Action","R",104,7.7,98,87
+"The Last Picture Show","Nominee","Drama","R",118,8,100,90
+"Tess","Nominee","Drama","PG",186,7.3,81,78
+"The Elephant Man","Nominee","Biography","PG",124,8.1,92,93
+"Children of a Lesser God","Nominee","Drama","R",119,7.2,82,79
+"The Mission","Nominee","Adventure","PG",125,7.4,64,87
+"American Beauty","Winner","Drama","R",122,8.3,87,93
+"Mystic River","Nominee","Crime","R",138,7.9,88,89
+"Ray","Nominee","Biography","PG-13",152,7.7,80,87
+"The Departed","Winner","Crime","R",151,8.5,91,94
+"The Queen","Nominee","Biography","PG-13",103,7.3,96,76
+"Babel","Nominee","Drama","R",143,7.4,69,77
+"Michael Clayton","Nominee","Crime","R",119,7.2,91,69
+"A Serious Man","Nominee","Comedy","R",106,7.1,90,68
+"An Education","Nominee","Drama","PG-13",100,7.3,94,80
+"The Social Network","Nominee","Biography","PG-13",120,7.7,96,86
+"Argo","Winner","Biography","R",120,7.7,96,90
+"Gravity","Nominee","Drama","PG-13",91,7.7,96,80
+"Captain Phillips","Nominee","Adventure","PG-13",134,7.8,93,89
+"12 Years a Slave","Winner","Biography","R",134,8.1,95,90
+"Whiplash","Nominee","Drama","R",106,8.5,94,94
+"The Martian","Nominee","Adventure","PG-13",144,8,91,91
+"Bridge of Spies","Nominee","Drama","PG-13",142,7.6,90,87
+"Room","Nominee","Drama","R",118,8.1,93,93
+"Moonlight","Winner","Drama","R",111,7.4,98,79
+"A Star Is Born","Nominee","Drama","R",136,7.6,90,79
+"The Red Shoes","Nominee","Drama","R",135,8.1,97,92
+"Johnny Belinda","Nominee","Drama","NR",102,7.8,89,88
+"A Streetcar Named Desire","Nominee","Drama","PG",122,8,98,90
+"Roman Holiday","Nominee","Comedy","NR",118,8,97,93
+"The Robe","Nominee","Drama","G",135,6.8,33,69
+"Cat on a Hot Tin Roof","Nominee","Drama","PG",108,8,97,92
+"The Defiant Ones","Nominee","Crime","PG",96,7.6,83,87
+"The Hustler","Nominee","Drama","NR",134,8,98,93
+"Funny Girl","Nominee","Biography","G",151,7.4,93,85
+"Five Easy Pieces","Nominee","Drama","R",98,7.5,88,84
+"Dog Day Afternoon","Nominee","Biography","R",125,8,96,90
+"Midnight Express","Nominee","Biography","R",121,7.6,96,89
+"Atlantic City","Nominee","Crime","R",104,7.3,100,77
+"Ordinary People","Winner","Drama","R",124,7.7,89,88
+"Chariots of Fire","Winner","Biography","PG",125,7.2,82,80
+"Amadeus","Winner","Biography","R",160,8.3,93,95
+"A Soldier's Story","Nominee","Crime","PG",101,7.2,90,81
+"Places in the Heart","Nominee","Drama","PG",111,7.4,89,83
+"Fatal Attraction","Nominee","Drama","R",119,6.9,76,72
+"My Left Foot","Nominee","Biography","R",103,7.9,98,92
+"The Shawshank Redemption","Nominee","Drama","R",142,9.3,91,98
+"Quiz Show","Nominee","Biography","PG-13",133,7.5,96,87
+"Pulp Fiction","Nominee","Crime","R",154,8.9,92,96
+"L.A. Confidential","Nominee","Crime","R",138,8.2,99,94
+"Crash","Winner","Crime","R",112,7.7,74,88
+"Sideways","Nominee","Comedy","R",127,7.5,97,79
+"Capote","Nominee","Biography","R",114,7.3,90,82
+"Atonement","Nominee","Drama","R",123,7.8,83,80
+"Moneyball","Nominee","Biography","PG-13",133,7.6,94,86

@@ -1,0 +1,327 @@
+---
+title: 'Stats 250: Lab 3'
+author: "Instructional Team"
+date: "Summer 2022"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Learning Objectives
+
+### Statistical Learning Objectives
+1. Practice with histograms and boxplots
+1. Revisit the five-number summary of a variable
+
+### R Learning Objectives
+1. Make a histogram 
+1. Make a boxplot
+1. Make a side-by-side boxplot (plot by group)
+1. Calculate numerical summaries by group
+
+### Functions covered in this lab
+1. `hist()`
+1. `boxplot()`
+1. `aggregate()`
+
+
+***
+
+
+## Lab Tutorial
+
+We are back to hanging out with our penguin friends. Run the following code chunk to read in the data.  
+
+```{r readpenguins}
+penguins <- read.csv("penguins.csv")
+```
+
+You should now see the `penguins` data set in your global environment (the top right pane). 
+
+
+### Histograms in R
+
+Histograms help visualize the distribution of a *quantitative* variable. They are wonderful for checking shape!
+
+To create a histogram in R, we use the `hist()` function and input our variable of interest. Remember the correct syntax to reference a variable! 
+
+`dataset$variable`
+
+We use the name of the data set, followed by a dollar sign, followed by the name of the variable. Let's create a histogram for the variable body mass.
+
+```{r histPoor}
+hist(penguins$body_mass_g)
+```
+
+Without including any additional arguments, we get the basic plot above. The x-axis label and title exist, but they aren't great. We should always use arguments to make the graph easier to read. Here's something much better:
+
+```{r histGreat}
+hist(penguins$body_mass_g,
+     main = "Histogram of Penguin Body Mass",
+     xlab = "Body Mass (in grams)")
+```
+
+Remember, we will always be looking for appropriate labels and a proper title.
+
+**Question:** Based on the histogram, what is the most appropriate measure of center (mean or median) for body mass? 
+
+**Demo #1**: Create a histogram for flipper length (`flipper_length_mm`). Include an appropriate x-axis label and title. Feel free to copy, paste, and edit the code from the chunk above (or type it from scratch). 
+
+**Coding Challenge:**  Add some color to the histogram! 
+
+```{r demo1, error = T}
+# Replace this text with your code
+
+``` 
+
+Be careful with your labels for the plot. 
+
+**Question:** How would you describe the shape of the distribution of flipper length? 
+
+**Answer:** Replace this text with your answer.
+
+
+### Boxplots in R
+
+Another great graphical display for *quantitative* variables is a boxplot. It is wonderful for visualizing the five-number summary, but we cannot determine the shape! (For all we know, there could be a bimodal distribution behind the boxplot.)
+
+To create a boxplot in R, we use the `boxplot()` function and input our variable of interest. As we did with histograms, we should also provide additional arguments for the title and label (but this time we need to update the y-axis label instead of the x-axis label). 
+
+```{r boxplot}
+boxplot(penguins$body_mass_g,
+        main = "Boxplot of Penguin Body Mass",
+        ylab = "Body Mass (in grams)")
+```
+
+Boxplots are a graphical representation of the "five-number summary" (min, Q1, median, Q3, and max). Instead of eyeballing the values from the boxplot, it's good practice to compute the numerical summaries. (And it's not that much extra work.).  
+
+**Demo #2**: Create a boxplot for flipper length. Include an appropriate y-axis label and title. Feel free to copy, paste, and edit the code from the chunk above (or type it from scratch).
+
+```{r demo2, error = T}
+# Replace this text with your code
+
+```
+
+Did your code run correctly? If not, now is a great time to ask for help!
+
+**Question:** Based on your boxplot, approximately 25% of the observed penguins have a flipper length of at most ______ millimeters.
+
+**Answer:** Replace this text with your answer.
+
+
+### Side-by-Side Boxplots
+
+One major benefit of a boxplot, is that they are great for comparing a *quantitative* variable **by** a *categorical* variable. 
+
+To create a side-by-side boxplot in R, we use the `boxplot()` function with some changes. The biggest difference is that we include a second variable (the categorical variable) after the first variable (the quantitative variable). We also have to include an x-axis label *and* a y-axis label. Let's see what we're talking about:
+
+```{r sideBySideBoxplot}
+boxplot(penguins$body_mass_g ~ penguins$sex,
+        main = "Boxplots of Penguin Body Mass by Sex",
+        ylab = "Body Mass (in grams)",
+        xlab = "Sex")
+```
+
+Notice the `~` (tilde) in the code here. Think of this as the word "by". We are making a boxplot of "body mass *by* sex". Notice that we need to specify the data set for each of these variables! 
+
+**For side-by-side boxplots, we will always put the quantitative variable first followed by the categorical variable.** 
+
+Just like the bar charts we created in Lab 2, we can add colors by using the `col` argument. Here's that side-by-side boxplot again, but with color!
+
+```{r boxplotWithColor}
+boxplot(penguins$body_mass_g ~ penguins$sex,
+        main = "Boxplots of Penguin Body Mass by Sex",
+        ylab = "Body Mass (in grams)",
+        xlab = "Sex",
+        col = c("slateblue", "khaki3"))
+```
+
+Looking good! Now it's your turn.
+
+**Demo #3**: Create a side-by-side boxplot of flipper length by species. Include appropriate labels and a title. Feel free to copy, paste, and edit the code from the chunk above (or type it from scratch).
+
+```{r demo3, error = T}
+# Replace this text with your code
+
+```
+
+Think about how we can use the side-by-side plot to make comparisons.
+
+**Question:** From the side-by-side boxplot, what measure of center is compared across groups? In general, which penguin species has longer flippers? 
+
+**Answer:** Replace this text with your answer.
+
+
+### Numerical Summaries by Group
+
+We can also calculate the numerical summaries for a quantitative variable *by* a categorical variable. 
+
+Recall all of the individual numerical summaries:
+
+- `min()`
+- `median()`
+- `mean()`
+- `max()`
+- `sd()`
+- `IQR()`
+
+Suppose we want to calculate the median body mass for penguins *by* sex (i.e. we want to calculate the median body mass for male penguins and the median body mass for female penguins). We can do this using the `aggregate()` function. This function is a little bit different than other functions we have used so far -- so be careful!
+
+```{r aggregate}
+aggregate(body_mass_g ~ sex, 
+          data = penguins, 
+          FUN = median)
+```
+
+Notice we did not include the data set name (penguins) with each of the variables. Instead, this function takes an additional argument called `data` and this is where we type in the name of the data set.
+
+The last argument (`FUN`) is short for "function". Input whichever numerical summary you wish to calculate (median, mean, min, max, sd, IQR, etc.). 
+
+**Once again, the order is quantitative variable, then categorical variable.**
+
+**Demo #4**: Calculate the *maximum* flipper length *by* species. Be very careful with the syntax. Feel free to copy, paste, and edit the code from the chunk above (or type it from scratch).
+
+```{r demo4, error = T}
+# Replace this text with your code
+
+```
+
+Do these numbers seem to match with the maximum values from the side-by-side boxplot you created in Demo 4? Again, it's typically nice to report the numerical summaries, rather than just eyeballing the values them from the plot.
+
+**Question:** What is the maximum flipper length for Adelie penguins?
+
+**Answer:** Replace this text with your answer.
+
+
+***
+
+
+## Try It!
+
+Complete the following exercises. Remember, the "Try It" questions will typically be code-based and will be graded for **completeness**. Be sure to give *every* question your best shot! We strongly encourage you to form small groups and work together. 
+
+In this Try It, we will be using a data set called `movies`. This data set contains information about nominees for Academy Award for Best Picture. Information on the variables can be found below:
+
+- `result`: the result of the nomination (Nominee or Winner)
+- `genre`: type of film (Action, Comedy, Drama, etc.)
+- `rating`: rating of intended audience (G, PG, PG-13, etc.)
+- `runtime`: length of the movie (in minutes)
+- `imdb`: IMDb rating (out of 10)
+- `tomato`: "Tomatometer" critic rating from Rotten Tomatoes (out of 100)
+- `audience`: Audience rating from Rotten Tomatoes (out of 100)
+
+
+> **1.** Start by reading in the data by running the code chunk below. Note: you do not have to report anything for an answer.
+
+```{r tryIt1, error = T}
+movies <- read.csv("nominees.csv", row.names = 1)
+```
+
+
+
+> **2.** Use the `str()` function to examine the contents of the data set. How many categorical variables are in the data set? How many quantitative variables are in the data set? Report the numbers below the code chunk. 
+
+```{r tryIt2, error = T}
+# Replace this text with your code!
+
+```
+
+*Answer:* Replace this text with your answer.
+
+
+
+> **3.** Create a histogram for IMDb rating (out of 10) for the sample of nominees for Academy Award for Best Picture (`imdb`). Be sure to include an appropriate x-axis label and title. What measure of center and what measure of variability would be appropriate to report given your histogram? (We are looking for the name of each, not the values.) 
+
+```{r tryIt3, error = T}
+# Replace this text with your code!
+
+```
+
+*Answer:* Replace this text with your answer.
+
+
+
+> **4.** Report the appropriate measure of center for the IMDb rating.  Remember to report the acutal value rather than eyeballing the value from the plot. 
+
+```{r tryIt4, error = T}
+# Replace this text with your code!
+
+```
+
+*Answer:* Replace this text with your answer.
+
+
+
+> **5.** Create a boxplot for movie runtime (`runtime`). Be sure to include an appropriate y-axis label and title.
+
+```{r tryIt5, error = T}
+# Replace this text with your code!
+
+```
+
+
+
+> **6.** Create a side-by-side boxplot to compare a quantitative variable of your choice across award results. *The quantitative variable choice is up to you!* Be sure to include an appropriate x-axis label, y-axis label, and title.  
+
+```{r tryIt6, error = T}
+# Replace this text with your code!
+
+```
+
+
+
+> **7.** Using the same two variables that you used in Try It 6, compute the median for the quantitative variable across the groups of your categorical variable. Remember, the aggregate function has some different inputs than we are used to!  
+
+```{r tryIt7, error = T}
+# Replace this text with your code!
+
+```
+
+
+
+## Dive Deeper
+
+Complete the following questions. Remember, the "Dive Deeper" questions will involve analyzing the results and will be graded for **correctness**. If you have any questions, please ask for help (in lab, in office hours, or on Piazza)!
+
+> **1.** Is the following statement appropriate? "From the boxplot of movie runtime in Try It 5, since the median is roughly in the middle in the IQR, we can conclude that the distribution of movie runtimes is symmetric." Briefly explain your answer.  
+
+*Answer:* Replace this text with your answer.
+
+
+
+> **2.** Is the following statement appropriate? "From the boxplot of movie runtime in Try It 5, we can approximate the maximum movie runtime to be about 185 minutes." Briefly explain your answer.   
+
+*Answer:* Replace this text with your answer.
+
+
+***
+
+
+## Submission Instructions
+
+Carefully follow the instructions below to submit your work.
+
+1. At the top of this document, change the `author` field to your name (in quotes!). 
+
+2. Click the **Knit** button one last time.
+
+3.  In the Files pane (the bottom right window), check the box next to "lab03report.html". 
+
+4. Click More > Export... 
+
+5. Leave the name of the file as "lab03report.html". **Do not change the file name.** Click Download and save the file to your computer.  
+
+6.  On the Stats 250 Canvas site, click the "Assignments" panel on the left side of the page. Scroll to find "Lab 3", and open the assignment. Click "Start Assignment". 
+
+7.  At the bottom of the page, upload your saved "lab03report.html" file. 
+
+8.  Click "Submit Assignment". 
+
+
