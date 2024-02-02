@@ -1,0 +1,275 @@
+---
+title: 'Stats 250: Lab 3 Resources'
+author: "Instructional Team"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Learning Objectives
+1. Review functions from previous labs
+2. Learn how to create a multivariate plot
+3. Compute probabilities from a normal distribution (Optional)
+4. Compute values that correspond to percentiles of a normal distribution (Optional)
+
+
+***
+
+
+## Coding Examples
+
+### Review via Case Study
+
+You have learned some helpful functions in the first few labs of the semester. Let's review them through an interesting analysis of government support for people with disabilities.  
+
+
+### DDS Background
+
+In the United States, individuals with developmental disabilities typically receive services and support from state governments. The State of California allocates funds to developmentally-disabled residents through the California Department of Developmental Services (DDS); individuals receiving DDS funds are referred to as "consumers". 
+
+One of the responsibilities of DDS is to allocate funds that support over 250,000 developmentally-disabled residents (referred to by the program as “consumers”). A team of researchers examined the mean annual expenditure on consumers by ethnicity and found that the mean annual expenditures for Hispanic consumers was approximately one-third of the mean expenditures of White non-Hispanic consumers. This striking discrepancy prompted allegations of race-based discrimination against the California DDS. These allegations resulted in a formal suit being filed against the state of California, claiming that its DDS program was guilty of race-based discrimination.
+
+The data set `dds` represents a sample of roughly 780 DDS consumers (out of a total population of approximately 250,000), and includes information about age, gender, ethnicity, and the amount of financial support per consumer provided by the DDS. 
+
+1. `id`: ID number of consumer
+2. `expenditures`: amount of services and support provided by the DDS (in dollars)
+3. `age`: age of consumer (in years)
+4. `age.cohort`: age group of consumer (0-5, 6-12, 13-17, 18-21, 22-50, or 51+)
+5. `gender`: gender of consumer (Female or Male)
+6. `ethnicity`: ethnicity of consumer (Hispanic or White not Hispanic)
+
+Use the following code chunk to read in the data set. 
+
+```{r read_data}
+load("dds.rda")
+```
+
+And be sure to load in the required packages!
+
+```{r load_package}
+library(ggplot2)
+```
+
+
+### Variable Types and Roles
+
+The first step is to identify/define the variable types, variable roles, and observational unit for the data set/analysis question. The question we wish to analyze: *Is a recipient’s ethnicity associated with the amount of money the state of California spends on their DDS services and support?*
+
+```{r preview_dds}
+head(dds)
+```
+
+**Variable Types:**
+
+- `expenditures`: quantitative
+- `age`: quantitative
+- `age.cohort`: categorical
+- `gender`: categorical
+- `ethnicity`: categorical
+
+**Variable Roles:** in this analysis, `expenditures` will act as the response variable and `ethnicity` will act as the explanatory variable. 
+
+**Observational Unit:** in this data set, each row represents a different "consumer" (or California resident who receives DDS funds).
+
+
+### SBS Boxplot with Two Variables
+
+To investigate the claim, we can create a side-by-side boxplot for the variables of interest. 
+
+```{r boxplot_two_variables_example1}
+ggplot(data = dds, aes(x = ethnicity, y = expenditures)) + 
+  
+  geom_boxplot() +
+  
+  labs(title = "Side-by-Side Boxplots of DDS Expenditures by Ethnicity",
+       subtitle = "by Stats 250 Instructional Team",
+       x = "Ethnicity",
+       y = "Amount of Services and Support (in $)")
+```
+
+The boxplots appear to confirm the claim that a recipient’s ethnicity is associated with the amount of money the state of California spends on their DDS services and support. The median value of expenditures is much higher for "White non Hispanic", as is the third quartile.
+
+The State of California believes that other variables may be influencing (or confounding) the relationship found above. A further analysis of additional variables should be explored. 
+
+
+### Stacked Bar Charts
+
+The variable `age.cohort` assigns recipients to one of six age groups. These cohorts are indicative of particular life phases. 
+
+- In the first three cohorts, recipients are still living with their parents as they move through preschool age, elementary / middle school age, and high school age. 
+- In the 18-21 cohort, recipients are transitioning from their parents’ homes to living on their own or in supportive group homes. 
+- From ages 22 – 50, individuals are mostly no longer living with their parents but may still receive some support from family. 
+- In the 51+ cohort, recipients often have no living parents and typically require the most financial support from DDS. 
+
+With this information, we wish to explore `age.cohort` as a potential confounding variable. In order for `age.cohort` to be considered a *confounding variable*, it must be shown that it has an association with *both* the explanatory variable (`ethnicity`) *and* the response variable (`expenditures`). 
+
+Let's start by visualizing the relationship between `age.cohort` and `ethnicity` using a stacked bar chart.
+
+```{r stacked_bar_chart_example}
+ggplot(data = dds, aes(x = age.cohort, fill = ethnicity)) + 
+  
+  geom_bar() +
+  
+  labs(title = "Stacked Bar Chart of Ethnicity by Age Cohort",
+       subtitle = "by Stats 250 Instructional Team",
+       x = "Age Cohort",
+       y = "Frequency")
+```
+
+From the plot, there appears to be an association between age cohort and ethnicity - old age cohorts tend to have a larger proportion of "White non Hispanic" customers. 
+
+```{r two_way_frequency_table}
+addmargins(table(dds$ethnicity, dds$age.cohort))
+```
+
+```{r conditional_probabilities}
+20/64
+46/137
+67/170
+69/147
+133/176
+66/83
+```
+
+The code above computes the probability that the consumer is "White non Hispanic", given a specific age cohort. As the age of the cohort increases, we see that the conditional probability increases as well - signifying an association between the two variables. 
+
+Now, let's explore if `age.cohort` is associated with `expenditures`, the other relationship needed for `age.cohort` to be considered a confounding variable. 
+
+```{r boxplot_two_variables_example2}
+ggplot(data = dds, aes(x = age.cohort, y = expenditures)) + 
+  
+  geom_boxplot() +
+  
+  labs(title = "Side-by-Side Boxplots of DDS Expenditures by Age Cohort",
+       subtitle = "by Stats 250 Instructional Team",
+       x = "Age Cohort",
+       y = "Amount of Services and Support (in $)")
+```
+
+There appears to be a clear association between the variables. As the age of the cohort increases, the median values (and all other numerical summaries) for expenditures increase as well.
+
+From our analysis, we see that `age.cohort` confounds the relationship between `ethnicity` and `expenditures` - because an association is present with both the explanatory variable and the response variable from the original research question.
+
+
+### SBS Boxplot with Three Variables
+
+Let's explore a powerful visual to supplement the findings above. We can take the original boxplot of `expendtures` and `ethnicity`, but we can include `age.cohort` by using color. The code would look like this:  
+
+```{r boxplot_three_variables_example1}
+ggplot(data = dds, aes(x = ethnicity, y = expenditures, fill = age.cohort)) + 
+  
+  geom_boxplot() +
+  
+  labs(title = "Side-by-Side Boxplots of DDS Expenditures by Ethnicity and Age Cohort",
+       subtitle = "by Stats 250 Instructional Team",
+       x = "Ethnicity",
+       y = "Amount of Services and Support (in $)")
+```
+
+In the plot above, we see that if we focus on a specific age cohort (such as 22-50, for example), the boxplots of "Hispanic" and "White non Hispanic" line up fairly well. The association that jumps out is the increase in expenditures (for *both* "Hispanic" and "White non Hispanic") as the age of the cohort increases.
+
+Given `ethncity` was our original explanatory variable, the plot above is the more appropriate plot to make for our analysis. We could, however, switch our explanatory variable and our confounding variable to visualize the relationship in a slightly different way - making it easier to compare ethnicity across the various age cohorts.  
+
+```{r boxplot_three_variables_example2}
+ggplot(data = dds, aes(x = age.cohort, y = expenditures, fill = ethnicity)) + 
+  
+  geom_boxplot() +
+  
+  labs(title = "Side-by-Side Boxplots of DDS Expenditures by Age Cohort and Ethnicity",
+       subtitle = "by Stats 250 Instructional Team",
+       x = "Age Cohort",
+       y = "Amount of Services and Support (in $)")
+```
+
+We see that given a specific age cohort, the boxplots of "Hispanic" and "White non Hispanic" line up fairly well - but the median expenditures increase as age of cohort increases. 
+
+
+That's all we have for Lab 3! What questions do you have?
+
+Now, click on the file titled `lab03_assignment` in the bottom right window to open up the assignment for today.
+
+
+***
+
+
+## Optional
+
+Below, you'll find some example for computing probabilities and quantiles for a normal distribution. You have seen this code in lecture, but feel free to explore some additional examples below!
+
+### Finding Probabilities from Values
+
+We can use the `pnorm()` function to calculate probabilities from a normal distribution. This function has four arguments that we'll utilize:
+
+- `q`: the bound (or threshold) of interest
+- `mean`: the mean of the distribution
+- `sd`: the standard deviation of the distribution
+- `lower.tail`: TRUE shades to the left, FALSE shades to the right
+
+In sticking with our bird-themed data/examples, suppose the distribution of wingspans for adult male bald eagles is normally distributed with a mean of 82 inches and a standard deviation of 3 inches. 
+
+What is the probability that an adult male bald eagle selected at random has a wingspan *over* 84 inches (7 feet)? We would use the following code to find out!
+
+```{r pnorm_example1}
+pnorm(q = 84, mean = 82, sd = 3, lower.tail = FALSE)
+```
+
+What about the probability that a randomly selected adult male bald eagle has a wingspan of *at most* 76 inches? 
+
+```{r pnorm_example2}
+pnorm(q = 76, mean = 82, sd = 3, lower.tail = TRUE)
+```
+
+**Demo #1**: Suppose the distribution of wingspans for peregrine falcons (the fastest animal on the planet!) is normally distributed with a mean of 41 inches and a standard deviation of 2 inches. What is the probability that a randomly selected peregrine falcon has a wingspan of at least 44 inches?
+
+```{r demo1, error = T}
+# Replace this text with your code
+
+```
+
+We can also compute these probabilities using our Shiny App (linked on our Canvas homepage)! Let's confirm the result of Demo #1 together using this helpful app.
+
+
+
+### Finding Values from Percentiles
+
+We can use the `qnorm()` function to find the percentiles that correspond to the normal distribution. This function has *almost* the same four arguments as `pnorm()`:
+
+- `p`: the percentile of interest
+- `mean`: the mean of the distribution
+- `sd`: the standard deviation of the distribution
+- `lower.tail`: TRUE probability to the left, FALSE probability to the right
+
+The distribution of wingspans for adult male bald eagles is normally distributed with a mean of 82 inches and a standard deviation of 3 inches. 
+
+An adult male bald eagle would need a wingspan of at least how long to be considered in the longest 10% of adult male bald eagles? The top 10% corresponds to the 90th percentile of the distribution -- so we could use the following code:
+
+```{r qnorm_example1a}
+qnorm(p = 0.90, mean = 82, sd = 3, lower.tail = TRUE)
+```
+
+Or we could use 10% for `p`, but change `lower.tail` to `FALSE` (meaning we want the value that corresponds to the *top* 10%). 
+
+```{r qnorm_example1b}
+qnorm(p = 0.10, mean = 82, sd = 3, lower.tail = FALSE)
+```
+
+**Demo #2**: Verify the wingspan above using the Shiny App. Using a mean of 82 and standard deviation of 3, switch the probability form to "P(X > c)". Your lower bound should be the result of the previous code chunk. What do you get for the corresponding probability?
+
+*Answer:* Replace this text with your answer.
+
+
+In summary, these two functions are used for the following:
+
+- `pnorm()`: when you have a value of interest and want to find the corresponding probability (or percent of observations above/below this value)
+- `qnorm()`: when you have a percentile (top/bottom X%) and want to find the corresponding value (in the units of the variable of interest)
+
+
